@@ -1,0 +1,27 @@
+﻿@using Basics.IntrApi.Client.Models
+@model List<ProtectedItemModel>
+@{
+    ViewData["Title"] = "Protected Items";
+}
+
+<h3 class="text-primary">Protected Items</h3>
+<div class="table-responsive">
+    <table class="table table-sm table-hover">
+        <thead class="bg-primary">
+            <tr>
+                <th class="text-light">Key</th>
+                <th class="text-light">Key</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var claim in Model)
+            {
+                <tr>
+                    <td>@claim.Key</td>
+                    <td>@claim.Value</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+

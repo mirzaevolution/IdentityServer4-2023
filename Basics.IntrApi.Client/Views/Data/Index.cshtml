@@ -1,0 +1,21 @@
+﻿@using Basics.IntrApi.Client.Models
+@model DataResponse
+@{
+    ViewData["Title"] = "Api Data Response";
+}
+
+<h3 class="text-primary">Api Data Response</h3>
+
+
+@if(Model!=null)
+{
+    <div class="text-success">
+        <h4>Api response: @Model.Message</h4>
+    </div>
+}
+else
+{
+    <div class="text-danger">
+        <h4>Empty response from api endpoint!</h4>
+    </div>
+}
